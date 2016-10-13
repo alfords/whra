@@ -71,7 +71,7 @@ model_xgb=xgb.train(params = params,data=dtrain,nrounds = nrounds)
 #########################################################
 ############ load the test data and predict #############
 #########################################################
-test = train # class: data.frame
+test = read.table('WomenHealth_Training.csv', header=TRUE, sep=",", strip.white=TRUE, stringsAsFactors = F, colClasses = colclasses)
 
 
 # do the same data preparation for the testing data as what I did for the training data
