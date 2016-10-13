@@ -101,6 +101,6 @@ class_to_label=function(class,lenc){
 pred_xgb=predict(model_xgb,dtest)
 
 # map labels
-label_xgb=class_to_label(pred_xgb,lenc)
+label_xgb=class_to_label(pred_xgb,lenc1)
 # create the output data.frame
 label_xgb_df=data.frame('patientID'=test.dt$patientID,'Geo_Pred'=label_xgb$geo,'Segment_Pred'=label_xgb$segment,'Subgroup_Pred'=label_xgb$subgroup)
